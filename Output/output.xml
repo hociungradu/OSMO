@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20191017 15:55:08.351" generator="Robot 3.1.2 (Python 2.7.15 on win32)">
+<suite source="C:\Users\circuit_automation\PycharmProjects\OSMO\Tests\TestsSip\Android\14OsmoCalls4K.robot" id="s1" name="14OsmoCalls4K">
+<test id="s1-t1" name="14OsmoCalls4K">
+<kw name="Open Osmo Application On Second Device" library="sip-res">
+<kw name="Open Osmo Application" library="sip-res">
+<arguments>
+<arg>${APPIUM-URL-DEVICE2}</arg>
+<arg>${UUID-DEVICE2}</arg>
+<arg>8202</arg>
+</arguments>
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>${APPIUM-URL}</arg>
+<arg>newCommandTimeout=0</arg>
+<arg>platformName=Android</arg>
+<arg>skipDeviceInitialization=true</arg>
+<arg>deviceName=${DEVICE}</arg>
+<arg>udid=${DEVICE}</arg>
+<arg>appPackage=${APP-PACKAGE}</arg>
+<arg>appActivity=${APP-MAIN-ACTIVITY}</arg>
+<arg>systemPort=${PORT}</arg>
+<arg>noReset=true</arg>
+<arg>automationName=UiAutomator2</arg>
+</arguments>
+<status status="PASS" endtime="20191017 15:55:20.253" starttime="20191017 15:55:08.714"></status>
+</kw>
+<status status="PASS" endtime="20191017 15:55:20.253" starttime="20191017 15:55:08.714"></status>
+</kw>
+<status status="PASS" endtime="20191017 15:55:20.253" starttime="20191017 15:55:08.714"></status>
+</kw>
+<kw name="Sign In User" library="sip-calls-res">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SIGNIN-SIGN-BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20191017 15:55:22.391" starttime="20191017 15:55:20.253"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${SIGNIN-SIGN-BUTTON}</arg>
+</arguments>
+<msg timestamp="20191017 15:55:22.407" level="INFO">Clicking element '//android.widget.Switch[@resource-id="com.unify.osmo:id/switch1"]'.</msg>
+<status status="PASS" endtime="20191017 15:55:23.193" starttime="20191017 15:55:22.391"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20191017 15:55:26.194" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20191017 15:55:26.194" starttime="20191017 15:55:23.194"></status>
+</kw>
+<status status="PASS" endtime="20191017 15:55:26.195" starttime="20191017 15:55:20.253"></status>
+</kw>
+<kw name="Calling From Dialpad" library="sip-calls-res">
+<arguments>
+<arg>20013</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SIGNIN-DIAL-TAB}</arg>
+</arguments>
+<status status="PASS" endtime="20191017 15:55:27.103" starttime="20191017 15:55:26.197"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${SIGNIN-DIAL-TAB}</arg>
+</arguments>
+<msg timestamp="20191017 15:55:27.110" level="INFO">Clicking element '//android.widget.ImageView[@content-desc="Dialpad"]'.</msg>
+<status status="PASS" endtime="20191017 15:55:27.926" starttime="20191017 15:55:27.103"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20191017 15:55:28.927" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20191017 15:55:28.927" starttime="20191017 15:55:27.927"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${DIALPAD-DIALDIGITS-FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20191017 15:55:29.778" starttime="20191017 15:55:28.927"></status>
+</kw>
+<kw name="Clear Text" library="AppiumLibrary">
+<doc>Clears the text field identified by `locator`.</doc>
+<arguments>
+<arg>${DIALPAD-DIALDIGITS-FIELD}</arg>
+</arguments>
+<msg timestamp="20191017 15:55:29.784" level="INFO">Clear text field '//android.widget.EditText[@resource-id="com.unify.osmo:id/dialdigits"]'</msg>
+<status status="PASS" endtime="20191017 15:55:30.416" starttime="20191017 15:55:29.779"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${DIALPAD-DIALDIGITS-FIELD}</arg>
+<arg>${dialdigits}</arg>
+</arguments>
+<msg timestamp="20191017 15:55:30.420" level="INFO">Typing text '20013' into text field '//android.widget.EditText[@resource-id="com.unify.osmo:id/dialdigits"]'</msg>
+<status status="PASS" endtime="20191017 15:55:31.722" starttime="20191017 15:55:30.416"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${DIALPAD-DIAL-BUTTON}</arg>
+</arguments>
+<msg timestamp="20191017 15:55:31.733" level="INFO">Clicking element '//android.widget.ImageButton[@resource-id="com.unify.osmo:id/callButton"]'.</msg>
+<status status="PASS" endtime="20191017 15:55:33.007" starttime="20191017 15:55:31.722"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20191017 15:55:35.010" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20191017 15:55:35.011" starttime="20191017 15:55:33.008"></status>
+</kw>
+<kw name="Check Outgoing CCW" library="sip-calls-res">
+<arguments>
+<arg>${dialdigits}</arg>
+</arguments>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>//android.widget.TextView[@resource-id="com.unify.osmo:id/name"]</arg>
+<arg>text</arg>
+</arguments>
+<assign>
+<var>${name-var}</var>
+</assign>
+<msg timestamp="20191017 15:55:35.415" level="INFO">Element '//android.widget.TextView[@resource-id="com.unify.osmo:id/name"]' attribute 'text' value 'PERSI 4K 20013' </msg>
+<msg timestamp="20191017 15:55:35.415" level="INFO">${name-var} = PERSI 4K 20013</msg>
+<status status="PASS" endtime="20191017 15:55:35.415" starttime="20191017 15:55:35.013"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>(${dialdigits})</arg>
+</arguments>
+<assign>
+<var>${str-digits}</var>
+</assign>
+<msg timestamp="20191017 15:55:35.416" level="INFO">${str-digits} = (20013)</msg>
+<status status="PASS" endtime="20191017 15:55:35.416" starttime="20191017 15:55:35.416"></status>
+</kw>
+<kw name="Get Substring" library="String">
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<arguments>
+<arg>${str-digits}</arg>
+<arg>-6</arg>
+<arg>-1</arg>
+</arguments>
+<assign>
+<var>${get-last-5}</var>
+</assign>
+<msg timestamp="20191017 15:55:35.417" level="INFO">${get-last-5} = 20013</msg>
+<status status="PASS" endtime="20191017 15:55:35.417" starttime="20191017 15:55:35.417"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>OSMO</arg>
+<arg>${get-last-5}</arg>
+</arguments>
+<assign>
+<var>${osmo-name}</var>
+</assign>
+<msg timestamp="20191017 15:55:35.418" level="INFO">${osmo-name} = OSMO 20013</msg>
+<status status="PASS" endtime="20191017 15:55:35.418" starttime="20191017 15:55:35.417"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>PERSI</arg>
+<arg>4K</arg>
+<arg>${get-last-5}</arg>
+</arguments>
+<assign>
+<var>${persi-name}</var>
+</assign>
+<msg timestamp="20191017 15:55:35.419" level="INFO">${persi-name} = PERSI 4K 20013</msg>
+<status status="PASS" endtime="20191017 15:55:35.419" starttime="20191017 15:55:35.418"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20191017 15:55:36.459" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20191017 15:55:36.459" starttime="20191017 15:55:35.420"></status>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<arguments>
+<arg>${CCW-DIALING-FIELD}</arg>
+<arg>Dialing</arg>
+<arg>message="Displayed Dialing Status is NOT OK"</arg>
+</arguments>
+<msg timestamp="20191017 15:55:36.471" level="INFO">Verifying element '//android.widget.TextView[@text="Dialing"]' contains exactly text 'Dialing'.</msg>
+<status status="PASS" endtime="20191017 15:55:36.761" starttime="20191017 15:55:36.459"></status>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<arguments>
+<arg>${CCW-NUMBER-FIELD}</arg>
+<arg>${get-last-5}</arg>
+<arg>message = "Dialed Number is NOT OK'</arg>
+</arguments>
+<msg timestamp="20191017 15:55:36.766" level="INFO">Verifying element '//android.widget.TextView[@resource-id="com.unify.osmo:id/phoneNumber"]' contains exactly text '20013'.</msg>
+<status status="PASS" endtime="20191017 15:55:37.035" starttime="20191017 15:55:36.762"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${name-var}'=='${persi-name}'</arg>
+<arg>Log</arg>
+<arg>Displayed PERSI Name is OK found ${name-var} should be ${persi-name}</arg>
+<arg>ELSE IF</arg>
+<arg>'${name-var}'=='${osmo-name}'</arg>
+<arg>Log</arg>
+<arg>Displayed OSMO Name is OK found ${name-var} should be ${osmo-name}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>"Displayed Called Name is NOT OK"</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Displayed PERSI Name is OK found ${name-var} should be ${persi-name}</arg>
+</arguments>
+<msg timestamp="20191017 15:55:37.037" level="INFO">Displayed PERSI Name is OK found PERSI 4K 20013 should be PERSI 4K 20013</msg>
+<status status="PASS" endtime="20191017 15:55:37.037" starttime="20191017 15:55:37.037"></status>
+</kw>
+<status status="PASS" endtime="20191017 15:55:37.037" starttime="20191017 15:55:37.036"></status>
+</kw>
+<status status="PASS" endtime="20191017 15:55:37.037" starttime="20191017 15:55:35.011"></status>
+</kw>
+<status status="PASS" endtime="20191017 15:55:37.037" starttime="20191017 15:55:26.196"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20191017 15:55:40.038" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20191017 15:55:40.038" starttime="20191017 15:55:37.038"></status>
+</kw>
+<kw name="Release call from OSMO" library="sip-calls-res">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${INPROGRESS-ENDCALL-BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20191017 15:55:40.414" starttime="20191017 15:55:40.041"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${INPROGRESS-ENDCALL-BUTTON}</arg>
+</arguments>
+<msg timestamp="20191017 15:55:40.418" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.unify.osmo:id/EndCallBtn"]'.</msg>
+<status status="PASS" endtime="20191017 15:55:40.725" starttime="20191017 15:55:40.414"></status>
+</kw>
+<status status="PASS" endtime="20191017 15:55:40.725" starttime="20191017 15:55:40.040"></status>
+</kw>
+<kw name="Check Journal Records" library="sip-calls-res">
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Go To Journal Page" library="sip-calls-res">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SIGNIN-JOURNAL-TAB}</arg>
+</arguments>
+<status status="PASS" endtime="20191017 15:55:42.216" starttime="20191017 15:55:40.726"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${SIGNIN-JOURNAL-TAB}</arg>
+</arguments>
+<msg timestamp="20191017 15:55:42.225" level="INFO">Clicking element '//android.widget.ImageView[@content-desc="Journal"]'.</msg>
+<status status="PASS" endtime="20191017 15:55:42.601" starttime="20191017 15:55:42.217"></status>
+</kw>
+<status status="PASS" endtime="20191017 15:55:42.602" starttime="20191017 15:55:40.726"></status>
+</kw>
+<kw name="Xpath Should Match X Times" library="AppiumLibrary">
+<doc>Verifies that the page contains the given number of elements located by the given ``xpath``.</doc>
+<arguments>
+<arg>//android.widget.RelativeLayout[@resource-id="com.unify.osmo:id/LinearLayout01"]</arg>
+<arg>${expected_lines}</arg>
+<arg>error = "Journal not as expected!"</arg>
+</arguments>
+<msg timestamp="20191017 15:55:43.068" level="INFO">Current page contains 1 elements matching '//android.widget.RelativeLayout[@resource-id="com.unify.osmo:id/LinearLayout01"]'.</msg>
+<status status="PASS" endtime="20191017 15:55:43.068" starttime="20191017 15:55:42.602"></status>
+</kw>
+<status status="PASS" endtime="20191017 15:55:43.068" starttime="20191017 15:55:40.726"></status>
+</kw>
+<kw type="teardown" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Delete All Journal Records</arg>
+<arg>AND</arg>
+<arg>Close All Applications</arg>
+</arguments>
+<kw name="Delete All Journal Records" library="sip-calls-res">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20191017 15:55:46.070" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20191017 15:55:46.070" starttime="20191017 15:55:43.070"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20191017 15:55:46.747" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20191017 15:55:46.747" starttime="20191017 15:55:46.070"></status>
+</kw>
+<kw name="Go To Journal Page" library="sip-calls-res">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SIGNIN-JOURNAL-TAB}</arg>
+</arguments>
+<status status="PASS" endtime="20191017 15:55:47.559" starttime="20191017 15:55:46.748"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${SIGNIN-JOURNAL-TAB}</arg>
+</arguments>
+<msg timestamp="20191017 15:55:47.564" level="INFO">Clicking element '//android.widget.ImageView[@content-desc="Journal"]'.</msg>
+<status status="PASS" endtime="20191017 15:55:47.831" starttime="20191017 15:55:47.560"></status>
+</kw>
+<status status="PASS" endtime="20191017 15:55:47.831" starttime="20191017 15:55:46.747"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20191017 15:55:48.832" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20191017 15:55:48.832" starttime="20191017 15:55:47.832"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${JOURNAL-MORE-MENIU}</arg>
+</arguments>
+<status status="PASS" endtime="20191017 15:55:49.219" starttime="20191017 15:55:48.832"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${JOURNAL-MORE-MENIU}</arg>
+</arguments>
+<msg timestamp="20191017 15:55:49.224" level="INFO">Clicking element '//android.widget.ImageView[@content-desc="More options"]'.</msg>
+<status status="PASS" endtime="20191017 15:55:49.514" starttime="20191017 15:55:49.219"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20191017 15:55:50.514" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20191017 15:55:50.514" starttime="20191017 15:55:49.514"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${JOURNAL-MORE-DELETE-ALL-FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20191017 15:55:50.693" starttime="20191017 15:55:50.514"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${JOURNAL-MORE-DELETE-ALL-FIELD}</arg>
+</arguments>
+<msg timestamp="20191017 15:55:50.696" level="INFO">Clicking element '//android.widget.TextView[@text="Delete all journal records"]'.</msg>
+<status status="PASS" endtime="20191017 15:55:51.557" starttime="20191017 15:55:50.693"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20191017 15:55:52.558" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20191017 15:55:52.558" starttime="20191017 15:55:51.557"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${JOURNAL-YES-ALL-BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20191017 15:55:52.873" starttime="20191017 15:55:52.558"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${JOURNAL-YES-ALL-BUTTON}</arg>
+</arguments>
+<msg timestamp="20191017 15:55:52.877" level="INFO">Clicking element '//android.widget.Button[@resource-id="android:id/button1"]'.</msg>
+<status status="PASS" endtime="20191017 15:55:53.669" starttime="20191017 15:55:52.874"></status>
+</kw>
+<status status="PASS" endtime="20191017 15:55:53.669" starttime="20191017 15:55:43.069"></status>
+</kw>
+<kw name="Close All Applications" library="AppiumLibrary">
+<doc>Closes all open applications.</doc>
+<status status="PASS" endtime="20191017 15:55:54.337" starttime="20191017 15:55:53.670"></status>
+</kw>
+<status status="PASS" endtime="20191017 15:55:54.337" starttime="20191017 15:55:43.069"></status>
+</kw>
+<status status="PASS" endtime="20191017 15:55:54.338" critical="yes" starttime="20191017 15:55:08.714"></status>
+</test>
+<status status="PASS" endtime="20191017 15:55:54.340" starttime="20191017 15:55:08.351"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="14OsmoCalls4K" pass="1">14OsmoCalls4K</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
